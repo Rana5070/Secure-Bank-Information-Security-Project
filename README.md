@@ -1,9 +1,5 @@
 # SecureBank — Information Security Demonstration Platform
 
-![SecureBank Banner](https://img.shields.io/badge/Security-Education%20Platform-0d9373?style=for-the-badge)
-![Frontend](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
-![License](https://img.shields.io/badge/License-Educational-lightgrey?style=for-the-badge)
 
 ## Overview
 
