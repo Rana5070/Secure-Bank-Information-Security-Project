@@ -11,12 +11,12 @@
 
 Unlike theoretical security presentations, SecureBank provides:
 
-* Live attack simulations
-* Secure vs vulnerable implementation comparison
-* Interactive dashboards
-* Real-time attack monitoring
-* Security-focused UI/UX
-* Demonstrations of authentication, encryption, access control, and web vulnerabilities
+- Live attack simulations
+- Secure vs vulnerable implementation comparison
+- Interactive dashboards
+- Real-time attack monitoring
+- Security-focused UI/UX
+- Demonstrations of authentication, encryption, access control, and web vulnerabilities
 
 The platform was designed to help students, developers, and security learners understand how common vulnerabilities work internally and how modern defense mechanisms prevent exploitation.
 
@@ -26,18 +26,18 @@ The platform was designed to help students, developers, and security learners un
 
 SecureBank includes multiple integrated cybersecurity labs and demonstrations:
 
-* Authentication & Access Control
-* Cross-Site Scripting (XSS)
-* SQL Injection (SQLi)
-* Cross-Site Request Forgery (CSRF)
-* Cryptography Demonstrations
-* Firewall Rule Simulation
-* Security Monitoring Dashboard
-* Role-Based Access Control (RBAC)
-* JWT Authentication Simulation
-* AES Encryption Demonstration
-* SHA-512 Hashing
-* Digital Signature & PKI Concepts
+- Authentication & Access Control
+- Cross-Site Scripting (XSS)
+- SQL Injection (SQLi)
+- Cross-Site Request Forgery (CSRF)
+- Cryptography Demonstrations
+- Firewall Rule Simulation
+- Security Monitoring Dashboard
+- Role-Based Access Control (RBAC)
+- JWT Authentication Simulation
+- AES Encryption Demonstration
+- SHA-512 Hashing
+- Digital Signature & PKI Concepts
 
 ---
 
@@ -47,22 +47,22 @@ SecureBank includes multiple integrated cybersecurity labs and demonstrations:
 
 Demonstrates:
 
-* Plain-text password vulnerability
-* SHA-512 password hashing
-* Salted hashes
-* JWT token structure
-* Token forgery attacks
-* Role-Based Access Control (RBAC)
-* Secure login flow simulation
+- Plain-text password vulnerability
+- SHA-512 password hashing
+- Salted hashes
+- JWT token structure
+- Token forgery attacks
+- Role-Based Access Control (RBAC)
+- Secure login flow simulation
 
 ### Security Concepts Covered
 
-* Authentication
-* Authorization
-* Secure password storage
-* Session security
-* JWT verification
-* Privilege escalation prevention
+- Authentication
+- Authorization
+- Secure password storage
+- Session security
+- JWT verification
+- Privilege escalation prevention
 
 ---
 
@@ -70,19 +70,19 @@ Demonstrates:
 
 Includes:
 
-* Stored XSS
-* Reflected XSS
-* Malicious payload execution
-* Cookie theft simulation
-* DOM sanitization
-* CSP (Content Security Policy)
+- Stored XSS
+- Reflected XSS
+- Malicious payload execution
+- Cookie theft simulation
+- DOM sanitization
+- CSP (Content Security Policy)
 
 ### Secure Defense Demonstrations
 
-* `textContent`
-* DOM sanitization
-* CSP header simulation
-* Safe rendering
+- `textContent`
+- DOM sanitization
+- CSP header simulation
+- Safe rendering
 
 ---
 
@@ -90,18 +90,18 @@ Includes:
 
 Demonstrates:
 
-* Authentication bypass
-* UNION-based SQL injection
-* Blind SQL injection
-* Database destruction simulation
-* Raw query vulnerabilities
+- Authentication bypass
+- UNION-based SQL injection
+- Blind SQL injection
+- Database destruction simulation
+- Raw query vulnerabilities
 
 ### Secure Defense Demonstrations
 
-* Parameterized queries
-* Input handling
-* Query sanitization
-* Injection prevention techniques
+- Parameterized queries
+- Input handling
+- Query sanitization
+- Injection prevention techniques
 
 ---
 
@@ -109,16 +109,16 @@ Demonstrates:
 
 Demonstrates:
 
-* Forged fund transfer requests
-* Cross-origin attack simulation
-* CSRF token verification
-* Synchronizer token pattern
+- Forged fund transfer requests
+- Cross-origin attack simulation
+- CSRF token verification
+- Synchronizer token pattern
 
 ### Secure Defense Demonstrations
 
-* CSRF token validation
-* Origin verification
-* Session validation
+- CSRF token validation
+- Origin verification
+- Session validation
 
 ---
 
@@ -126,12 +126,12 @@ Demonstrates:
 
 Includes simulations and demonstrations for:
 
-* AES encryption
-* SHA-512 hashing
-* RSA concepts
-* Digital signatures
-* PKI concepts
-* TLS certificate chain visualization
+- AES encryption
+- SHA-512 hashing
+- RSA concepts
+- Digital signatures
+- PKI concepts
+- TLS certificate chain visualization
 
 ---
 
@@ -139,12 +139,12 @@ Includes simulations and demonstrations for:
 
 Features:
 
-* Custom firewall rules
-* Traffic filtering
-* Packet inspection simulation
-* Allow/Deny actions
-* Port filtering
-* IP rule matching
+- Custom firewall rules
+- Traffic filtering
+- Packet inspection simulation
+- Allow/Deny actions
+- Port filtering
+- IP rule matching
 
 ---
 
@@ -152,24 +152,24 @@ Features:
 
 Interactive monitoring dashboard displaying:
 
-* Attack attempts
-* Blocked attacks
-* Security mode status
-* Real-time logs
-* Security statistics
-* Activity visualization
+- Attack attempts
+- Blocked attacks
+- Security mode status
+- Real-time logs
+- Security statistics
+- Activity visualization
 
 ---
 
 # Technologies Used
 
-| Technology              | Purpose                   |
-| ----------------------- | ------------------------- |
-| HTML5                   | Application structure     |
-| CSS3                    | Styling and responsive UI |
-| JavaScript (Vanilla JS) | Application logic         |
-| Lucide Icons            | Modern icon system        |
-| Google Fonts            | Typography                |
+| Technology | Purpose |
+|---|---|
+| HTML5 | Application structure |
+| CSS3 | Styling and responsive UI |
+| JavaScript (Vanilla JS) | Application logic |
+| Lucide Icons | Modern icon system |
+| Google Fonts | Typography |
 
 ---
 
@@ -220,8 +220,8 @@ Recommended for development.
 
 1. Install:
 
-* Visual Studio Code
-* Live Server extension
+- Visual Studio Code
+- Live Server extension
 
 2. Right click:
 
@@ -243,21 +243,21 @@ SecureBank was intentionally designed with a professional fintech-inspired inter
 
 Key UI decisions:
 
-* Banking-inspired dark/light security theme
-* Security state indicators
-* Real-time visual feedback
-* Modular learning sections
-* Responsive layouts
-* Interactive attack simulations
-* Animated transitions
-* Dashboard-focused information architecture
+- Banking-inspired dark/light security theme
+- Security state indicators
+- Real-time visual feedback
+- Modular learning sections
+- Responsive layouts
+- Interactive attack simulations
+- Animated transitions
+- Dashboard-focused information architecture
 
 The goal was to combine:
 
-* Cybersecurity education
-* Real-world realism
-* Professional frontend engineering
-* User engagement
+- Cybersecurity education
+- Real-world realism
+- Professional frontend engineering
+- User engagement
 
 ---
 
@@ -265,12 +265,12 @@ The goal was to combine:
 
 This project was created to help learners:
 
-* Understand modern web vulnerabilities
-* Visualize attack execution flow
-* Learn secure coding practices
-* Compare insecure vs secure implementations
-* Explore real-world cybersecurity concepts interactively
-* Improve frontend security awareness
+- Understand modern web vulnerabilities
+- Visualize attack execution flow
+- Learn secure coding practices
+- Compare insecure vs secure implementations
+- Explore real-world cybersecurity concepts interactively
+- Improve frontend security awareness
 
 ---
 
@@ -308,27 +308,27 @@ commentDiv.textContent = userInput
 
 After exploring SecureBank, users should understand:
 
-* Why input validation matters
-* How injection attacks work
-* Why hashing and salting are critical
-* How JWT authentication functions
-* How CSRF attacks exploit trust
-* Why CSP policies matter
-* The importance of defense-in-depth
-* The role of secure frontend architecture
+- Why input validation matters
+- How injection attacks work
+- Why hashing and salting are critical
+- How JWT authentication functions
+- How CSRF attacks exploit trust
+- Why CSP policies matter
+- The importance of defense-in-depth
+- The role of secure frontend architecture
 
 ---
 
 # Screens Included in the Project
 
-* Home Dashboard
-* Authentication Lab
-* XSS Lab
-* SQL Injection Lab
-* CSRF Lab
-* Cryptography Section
-* Firewall Section
-* Monitoring Dashboard
+- Home Dashboard
+- Authentication Lab
+- XSS Lab
+- SQL Injection Lab
+- CSRF Lab
+- Cryptography Section
+- Firewall Section
+- Monitoring Dashboard
 
 ---
 
@@ -336,10 +336,10 @@ After exploring SecureBank, users should understand:
 
 This project is strictly for:
 
-* Educational purposes
-* Academic demonstrations
-* Cybersecurity learning
-* Secure coding awareness
+- Educational purposes
+- Academic demonstrations
+- Cybersecurity learning
+- Secure coding awareness
 
 The attack simulations are intentionally built in a controlled frontend environment to demonstrate vulnerabilities safely.
 
@@ -351,16 +351,16 @@ Do NOT use these techniques against real systems.
 
 Potential upgrades:
 
-* Backend integration (Node.js / Express)
-* Real database connectivity
-* Full JWT authentication system
-* Real cryptographic implementations
-* Docker deployment
-* Multi-user simulation
-* API security demonstrations
-* OWASP Top 10 coverage
-* Logging & SIEM integration
-* Penetration testing sandbox
+- Backend integration (Node.js / Express)
+- Real database connectivity
+- Full JWT authentication system
+- Real cryptographic implementations
+- Docker deployment
+- Multi-user simulation
+- API security demonstrations
+- OWASP Top 10 coverage
+- Logging & SIEM integration
+- Penetration testing sandbox
 
 ---
 
@@ -368,11 +368,11 @@ Potential upgrades:
 
 This project focuses heavily on:
 
-* Clean UI architecture
-* Security-focused frontend engineering
-* Interactive cybersecurity education
-* Realistic attack simulation
-* Maintainable modular code
+- Clean UI architecture
+- Security-focused frontend engineering
+- Interactive cybersecurity education
+- Realistic attack simulation
+- Maintainable modular code
 
 The entire application was built using pure frontend technologies without frameworks to maximize learning transparency.
 
@@ -382,11 +382,11 @@ The entire application was built using pure frontend technologies without framew
 
 ## Rana Hamad Iftikhar
 
-* Information Security Student
-* Frontend Developer
-* Cybersecurity Enthusiast
-* AR Learner
-* Hockey Player
+- Information Security Student
+- Frontend Developer
+- Cybersecurity Enthusiast
+- AR Learner
+- Hockey Player
 
 ---
 
@@ -404,9 +404,9 @@ The project demonstrates practical implementations of major web security concept
 
 This project is intended for:
 
-* Educational use
-* Learning purposes
-* Academic demonstrations
+- Educational use
+- Learning purposes
+- Academic demonstrations
 
 You may modify and extend it for educational projects.
 
@@ -418,6 +418,10 @@ Most student security projects only explain attacks.
 
 SecureBank demonstrates:
 
-* How attacks happen
-* Why they succeed
-* How secure syst
+- How attacks happen
+- Why they succeed
+- How secure systems defend against them
+- What secure implementation actually looks like
+
+That difference matters.
+
